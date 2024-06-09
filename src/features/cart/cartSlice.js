@@ -7,13 +7,13 @@ const initialState = {
   //   numItems: 0,
 
   cart: [
-    {
-      pizzaId: 12,
-      name: 'pizzaitaly',
-      quantity: 2,
-      unitPrice: 16,
-      totalPrice: 32, //drieved state
-    },
+    // {
+    //   pizzaId: 12,
+    //   name: 'pizzaitaly',
+    //   quantity: 2,
+    //   unitPrice: 16,
+    //   totalPrice: 32, //drieved state
+    // },
   ],
 };
 
@@ -54,6 +54,8 @@ export const {
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+export const getCart = (state) => state.cart.cart;
 
 //  in large application have performance issue but with large application we can look into the (reselect) library for optimize selectors
 export const getTotalCartQuantity = (state) =>
