@@ -55,5 +55,9 @@ export const {
 
 export default cartSlice.reducer;
 
-export const getTotalCartPrice = (state) =>
+//  in large application have performance issue but with large application we can look into the (reselect) library for optimize selectors
+export const getTotalCartQuantity = (state) =>
   state.cart.cart.reduce((sum, item) => sum + item.quantity, 0);
+
+export const getTotalCartPrice = (state) =>
+  state.cart.cart.reduce((sum, item) => sum + item.totalPrice, 0);
