@@ -144,6 +144,16 @@ function CreateOrder() {
         <div>
           {/* because we can not data in redux  */}
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
+          {/*  to pass into the form action */}
+          <input
+            type="hidden"
+            name="position"
+            value={
+              position.longitude && position.latitude
+                ? `${position.latitude},${position.longitude} `
+                : ''
+            }
+          />
           <Button disabled={isSubmitting || isLoadingAddress} type="primary">
             {isSubmitting
               ? 'Placing order....'
