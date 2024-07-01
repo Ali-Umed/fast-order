@@ -1,6 +1,6 @@
-# Fast React
+# Fast Order
 
-Fast React is a responsive pizza ordering application built with React.js. Users can easily order their favorite pizza by providing their name, address, and location, and they will receive an estimated arrival time for their order. The application utilizes modern React features, React Router for navigation, Redux Toolkit for state management, and Tailwind CSS for styling.
+Fast Order is a responsive pizza ordering application built with React.js. Users can easily order their favorite pizza by providing their name, address, and location, and they will receive an estimated arrival time for their order. The application utilizes modern React features, React Router for navigation, Redux Toolkit for state management, and Tailwind CSS for styling.
 
 ## Features
 
@@ -24,9 +24,9 @@ Fast React is a responsive pizza ordering application built with React.js. Users
 
 We welcome contributions to Fast React! If you have any suggestions or improvements, feel free to create an issue or submit a pull request.
 
-## About Fast React
+## About Fast Order
 
-Fast React is designed to provide a seamless and efficient pizza ordering experience. Leveraging modern React features, state management with Redux Toolkit, and Tailwind CSS for responsive design, this application ensures users have a smooth and intuitive experience from start to finish.
+Fast Order is designed to provide a seamless and efficient pizza ordering experience. Leveraging modern React features, state management with Redux Toolkit, and Tailwind CSS for responsive design, this application ensures users have a smooth and intuitive experience from start to finish.
 
 ## Key Components
 
