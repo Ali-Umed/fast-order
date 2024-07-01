@@ -20,7 +20,7 @@ function AppLayout() {
 
       <Header />
 
-      <div className=" overflow-scroll">
+      <div className="overflow-scroll">
         <main className="bg mx-auto max-w-3xl">
           <Outlet />
         </main>
