@@ -74,7 +74,7 @@ function CreateOrder() {
           <label className="sm:basis-40">First Name</label>
           <input
             defaultValue={username}
-            className="input grow text-stone-500"
+            className="grow rounded-lg bg-stone-100 px-4 py-2 text-stone-700 transition focus:outline-none dark:bg-stone-800 dark:text-stone-200"
             type="text"
             name="customer"
             required
@@ -85,13 +85,13 @@ function CreateOrder() {
           <label className="sm:basis-40">Phone number</label>
           <div className="grow">
             <input
-              className="input w-full text-stone-500"
+              className="w-full rounded-lg bg-stone-100 px-4 py-2 text-stone-700 transition focus:outline-none dark:bg-stone-800 dark:text-stone-200"
               type="tel"
               name="phone"
               required
             />
             {formErrors?.phone && (
-              <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
+              <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700 dark:bg-red-950 dark:text-red-300">
                 {formErrors.phone}
               </p>
             )}
@@ -102,7 +102,7 @@ function CreateOrder() {
           <label className="sm:basis-40">Address</label>
           <div className="grow">
             <input
-              className="input w-full text-stone-500"
+              className="w-full rounded-lg bg-stone-100 px-4 py-2 text-stone-700 transition focus:outline-none dark:bg-stone-800 dark:text-stone-200"
               type="text"
               name="address"
               disabled={isLoadingAddress}
@@ -110,22 +110,21 @@ function CreateOrder() {
               required
             />
             {addressStatus === 'error' && (
-              <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
+              <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700 dark:bg-red-950 dark:text-red-300">
                 {errorAddress}
               </p>
             )}
           </div>
           {!position.latitude && !position.longitude && (
-            <span className="absolute right-[3px] top-[3px]  z-50 md:right-[5px] md:top-[5px]">
+            <span className="absolute right-[3px] top-[3px] z-50 md:right-[5px] md:top-[5px]">
               <Button
                 disabled={isLoadingAddress}
                 type={'small'}
                 onClick={(e) => {
-                  e.preventDefault(); // to fix when i click this button dont submit form
+                  e.preventDefault();
                   dispatch(fetchAddress());
                 }}
               >
-                {' '}
                 Get position
               </Button>
             </span>
@@ -134,7 +133,7 @@ function CreateOrder() {
 
         <div className="mb-12 flex items-center gap-5">
           <input
-            className="h-6 w-6 accent-yellow-400 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
+            className="h-6 w-6 accent-yellow-400 focus:outline-none dark:accent-yellow-500"
             type="checkbox"
             name="priority"
             id="priority"
