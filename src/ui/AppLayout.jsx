@@ -11,17 +11,13 @@ function AppLayout() {
   const theme = useSelector((state) => state.theme.theme);
 
   return (
-    <div
-      className={`grid ${colorTheme} h-screen grid-rows-[auto_1fr_auto]  ${
-        theme === 'dark' ? 'text-white' : 'text-black'
-      } `}
-    >
+    <div className="grid h-screen grid-rows-[auto_1fr_auto] font-sans text-stone-700">
       {isLoading && <Loader />}
 
       <Header />
 
-      <div className="overflow-scroll">
-        <main className="bg mx-auto max-w-3xl">
+      <div className="overflow-y-auto overflow-x-hidden bg-stone-50/50">
+        <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
           <Outlet />
         </main>
       </div>

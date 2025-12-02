@@ -4,10 +4,17 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: 'Roboto Mono, monospace',
+      sans: 'Outfit, sans-serif',
     },
 
     extend: {
+      colors: {
+        pizza: {
+          400: '#FFB380',
+          500: '#FF9F5A',
+          600: '#E07E3C',
+        },
+      },
       fontSize: {
         huge: ['80rem', { lineHeight: '1' }],
       },
